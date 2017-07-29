@@ -12,6 +12,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.description-font {
+  font-family: 'Lato', sans-serif;
+  font-size: 27px;
+  line-height: 47px;
+}
+
+.home-page {
+  min-height: 100%;
+}
+
 .title {
   font-size: 100px;
   font-weight: 900;
@@ -24,17 +34,24 @@
 }
 
 .about-container {
+  display: -webkit-flex;
   display: flex;
 }
 
 .about-text {
-  padding: 100px 40px 40px 40px;
+  color: #091A26;
+  padding: 95px 40px 40px 40px;
 }
 
-.description-font {
-  font-family: 'Lato', sans-serif;
-  font-size: 28px;
-  line-height: 47px;
+.about-text-container {}
+
+.img-container {}
+
+.headshot {
+  border-radius: 50%;
+  width: 50%;
+  overflow: auto;
+  margin: 50px 0 60px 185px;
 }
 
 .hello {
@@ -45,19 +62,12 @@
   letter-spacing: 10px;
   left: 80px;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
-  opacity: 0.02;
+  opacity: 0.06;
 }
 
-.headshot {
-  border-radius: 50%;
-  width: 50%;
-  overflow: auto;
-  margin: 20px 0 15px 180px;
-}
-
-.navigation {
+.nav-icon {
   position: fixed;
   z-index: 2;
   right: 0;
@@ -67,13 +77,12 @@
 }
 
 .menu-overlay {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   right: 0;
-  width: 50%;
-  height: 100%;
   display: none;
-  margin: auto;
+  width: 30%;
+  height: 100%;
   background-color: rgb(238, 69, 90);
 }
 
@@ -121,6 +130,7 @@
   position: relative;
   background-color: #091A26;
   display: block;
+  display: -webkit-block;
 }
 
 .mywork {
@@ -204,27 +214,28 @@
 }
 
 .links {
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
 }
 
-
-/*
 .links a {
   font-weight: 300;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   padding: 80px 20px;
   color: #EE455A;
   text-decoration: none;
-} */
+}
 
-.links a {
+
+/*.links a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 100;
   line-height: 5vh;
   color: #EE455A;
-}
+}*/
 
 .button {
   margin: 80px 20px;
@@ -254,10 +265,12 @@
 }
 
 .page-footer-container {
+  display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: #627077;
-  font-size: 12px;
+  font-size: 0.75em;
   font-family: 'Montserrat', sans-serif;
   padding: 10px 20px;
   letter-spacing: 1px;
@@ -317,74 +330,106 @@
 }
 
 @media only screen and (max-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
   body {
+    padding: 10px;
+  }
+  .row {
+    display: block;
+    padding: 20px;
+  }
+  .heading-font {
+    font-size: 20px;
+  }
+  .mywork {
+    font-size: 40px;
+    padding: 30px 0px;
+  }
+  .work-description {
+    padding: 10px 0px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .work-title {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .work-place {
+    font-size: 16px;
+    padding-top: 0;
+  }
+  [class*="col-"] {
     width: 100%;
   }
   .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .svg {
     width: 100%;
-    height 48px;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .hello {
     display: none;
   }
-  .row {
+  .col-6 {
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .about-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
   .description-font {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 35px;
   }
-  .work-description {
-    font-size: 20px;
-  }
   .headshot {
+    border-radius: 0;
     width: 100%;
     height: auto;
-    max-width: 60%;
     margin: 0 auto;
+  }
+  .about-text {
+    padding: 40px;
   }
   .title-container {
     width: auto;
     height: auto;
-    padding: 40px;
+    padding: 20px;
   }
   .title:nth-child(2), .title:nth-child(3) {
     display: inline;
   }
-  .heading-font {
-    font-size: 24px;
+  .about-text-container {
+    display: flex;
+  }
+  .title {
+    font-size: 40px;
   }
   .contact-page {
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
   }
   .contact-description {
-    font-size: 20px;
-    justify-content: space-around;
+    font-size: 16px;
     line-height: normal;
+    padding: 40px;
   }
-  .mywork, .contact {
-    font-size: 40px;
+  .contact {
+    padding: 20px;
+    font-size: 30px;
+  }
+  .links {
+    padding: 0px 5px;
   }
   .links a {
-    padding: 20px 20px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0 3vw 30px;
+    display: inline-block;
   }
   br {
     display: none;
   }
-}
-
-
 }
