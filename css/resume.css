@@ -14,7 +14,12 @@
   background-color: white;
 }
 
+.section-container {
+  padding: 2%;
+}
+
 .title-banner {
+  margin-bottom: 5%;
   padding: 5%;
   background-color: #091A26;
 }
@@ -222,9 +227,47 @@ hr {
     width: 100%;
   }
   .section-header-container {
-    background-color: #091A26;
+    padding: 40px 20px 20px 20px;
+    border-bottom: 2px solid rgba(98, 112, 119, 0.3);
+  }
+  .section-content-container {
+    padding: 20px 40px 40px 40px;
+  }
+  .section-text {
+    padding: 0;
   }
   .section-heading {
-    color: white;
+    color: #091A26;
+  }
+  .resume-heading {
+    font-size: 2em;
+  }
+  .headshot-resume {
+    position: relative;
+    left: 30%;
+    max-width: 30%;
+    float: none;
+  }
+  .headshot-container {
+    padding: 20px;
+  }
+  .heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-container {
+    padding: 40px;
+  }
+  .resume-button {
+    font-size: 12px;
+    width: 55vw;
+    height: 7vh;
+  }
+  .footer-resume {
+    padding: 20px 15px;
+  }
+  .footer-resume a {
+    font-size: 11px;
   }
 }
