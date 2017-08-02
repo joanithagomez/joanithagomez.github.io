@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.resume-container {
   width: 100%;
 }
 
@@ -165,9 +165,8 @@
   letter-spacing: 0.66px;
 }
 
-hr {
-  width: 2px;
-  size: 500px;
+.footer-resume a:hover {
+  font-weight: bold;
 }
 
 .row {
@@ -234,7 +233,7 @@ hr {
     padding: 20px 40px 40px 40px;
   }
   .section-text {
-    padding: 0;
+    padding: 0 20px 0 0;
   }
   .section-heading {
     color: #091A26;
