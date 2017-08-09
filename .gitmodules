@@ -1,0 +1,3 @@
+[submodule "projects/box-breathing"]
+	path = projects/box-breathing
+	url = https://github.com/joanithagomez/box-breathing
