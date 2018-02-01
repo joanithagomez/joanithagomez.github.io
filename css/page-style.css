@@ -509,6 +509,10 @@
     padding: 0px;
     margin: 0 3vw 30px;
   }
+  .svg-container{
+    width: auto;
+    height: auto;
+  }
   br {
     display: none;
   }
