@@ -49,16 +49,39 @@ body {
 
 .nav-bar {
   color: white;
-  background-color: transparent;
+  background-color:transparent;
   padding: 20px 0;
   text-transform: uppercase;
-  font-size: 0.8em;
-  /* font-weight: 900; */
+  font-size: 0.9em;
   letter-spacing: 2px;
   transition: all 0.3s ease-in-out;
-  /* border: 1px solid white; */
+  /* border: 3px solid red; */
+  /* display: flex;
+  align-items:center; */
+  z-index: 5;
+  
+}
+.nav-content {
+  /* border: 1px dotted white; */
 }
 
+
+.logo{
+  width: 50px;
+  height: 30px;
+  text-transform: lowercase;
+  font-family: 'Rock Salt', cursive;
+  /* border: 1px solid red; */
+}
+.nav-down{
+  position: fixed;
+  top:0vh;
+  height: 8vh;
+
+}
+.nav-up{
+  top: -8vh;
+}
 
 .shrink {
   background-color: #1a0146;
@@ -66,12 +89,15 @@ body {
 }
 
 .items {
-  margin: 0;
   display: flex;
   justify-content: flex-end;
+  /* float: right; */
 }
 
 .items > a {
+  padding: 2% 3%;
+  color: white;
+  text-decoration: none;
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -80,11 +106,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.items > a {
-  padding: 2% 3%;
-  color: white;
-  text-decoration: none;
-}
+
 
 .name {
   font-size: 4em;
@@ -117,13 +139,7 @@ body {
   /* color: #11cbdf; */
 
 }
-.logo{
-  width: 50px;
-  height: 50px;
-  text-transform: lowercase;
-  font-family: 'Rock Salt', cursive;
-  /* border: 1px solid red; */
-}
+
 
 .title {
   font-size: 3em;
@@ -144,28 +160,24 @@ body {
 
 .portfolio-item {
   position: relative;
-  margin: 0 0 30px 0;
-  /* float: left; */
   cursor: pointer;
-  /* border: 2px solid red; */
+  margin: 15px;
+
+  /* border: 11px solid red; */
 }
 .customrow{
-  position: relative;
-  width: auto;
-  height: auto;
+  display: flex;
+  /* border: 4px solid blue; */
   overflow: hidden;
+
 }
-.col-lg-4{
-  margin: 0;
+.col-sm-4{
+  /* border: 4px solid red; */
   padding: 0;
 }
 .image {
-  display: inline-block;
+  display: block;
   position: relative;
-  /* width: 100%;
-  height: auto; */
-  max-height: 100%;
-  max-width: 100%;
 }
 .filter{
   position: absolute;
@@ -182,7 +194,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left:0;
   right: 0;
   height: 100%;
   width: 100%;
@@ -238,12 +250,12 @@ body {
   color: #333;
   border-radius: 0;
   margin: 0;
-  line-height: 3rem;
+  line-height: 3rem ;
 }
 
 .modal-title {
   /* color: #3b3a3a; */
-  /* font-family: "Montserrat", sans-serif; */
+  font-family: 'Karla', sans-serif;
   font-size: 2em;
   text-transform: uppercase;
   text-align: center;
@@ -256,38 +268,38 @@ body {
   box-shadow: -10px 17px 70px 0 rgba(0,0,0,.4);
   margin: 2% 10%;
 }
-hr {
-  opacity: 0.6;
-}
+
 
 .close {
   padding: 0;
   margin: 0;
   stroke: #1a0146;
-  height: 90px;
+  height: 40px;
   /* font-size: 2em; */
-  width: 90px;
+  width: 40px;
 }
 
-h4 {
-  /* color: #c9c9c9; */
-  /* color: white; */
+.modal-subtitle {
+  margin-top: 1em;
   opacity: 0.6;
   font-size: 1.6em;
+  /* border: 1px solid red; */
 }
 .modal-text {
-  font-size: 1.4em;
-  /* color: #3b3a3a; */
+  font-family: 'Karla', sans-serif;
+  font-size: 1.3em;
+  /* border: 1px solid blue; */
   font-weight: 300;
-  letter-spacing: 1px;
+  /* margin: 0; */
+  /* letter-spacing: 1px; */
 }
 .modal-desc {
   padding-top: 5%;
   padding-left: 5%;
-  letter-spacing: 1px;
-font-size: 1.2em;
-font-weight: 200;
-line-height: 21px;
+  /* letter-spacing: 1px; */
+font-size: 1.4em;
+font-weight: 100;
+/* line-height: 21px; */
 }
 
 .modal.fade .modal-dialog {
@@ -415,6 +427,7 @@ line-height: 21px;
   padding-left: 10%;
   position: relative;
 }
+
 .info-title:after{
 content:"";
 display: block;
@@ -453,30 +466,34 @@ line-height: 21px;
 }
 
 .contacts {
+  font-family: 'Lato', sans-serif;
+
   background-color:#fff;
-  min-height: 70vh;
+  min-height: 50vh;
   /* padding: 0 18%; */
   padding-bottom: 40px;
-  color: #333;
+  /* color: #333; */
+  background-color: #151515;
 
 }
 
 .sayhello {
-  color: #333;
-  padding-top: 100px;
-  /* font-size: 7em; */
-  /* font-weight: 300; */
+  color: #8e8e8e ;
+  padding-top: 14%;
+  font-size: 4em;
+  font-weight: 300;
   /* border: 2px dotted black; */
 }
 
 .contact-text {
+  /* font-family: 'Lato', sans-serif; */
+  color: #8e8e8e ;
+  /* letter-spacing: 0.2px; */
   font-size: 1.4em;
-  /* color: white; */
-  letter-spacing: 1px;
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 21px;
+  font-weight: 200;
+  /* line-height: 21px; */
   margin-bottom: 4%;
+  margin-top: 1%;
 }
 .emailid{
   /* letter-spacing: 2px; */
@@ -485,37 +502,48 @@ line-height: 21px;
   /* margin-top: 2%; */
   font-weight: 200;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+}
+.emailid:hover{
+  text-decoration: none;
+
+  color: #fff;
 }
 
 .icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+
   /* border: 3px dotted orange; */
-  margin: 22.5px ;
+  /* margin: 22.5px ; */
 }
 
-.icons > a {
-  /* border: 1px solid green; */
-  margin: 0 1%;
-  cursor: pointer;
-}
 
 .icon-item {
   width: 30px;
   height: 30px;
+  margin: 0 2%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-item > svg {
   fill: #7f7f7f;
   transition: all 0.3s ease-in-out;
+
 }
-.github-icon > svg:hover {
-  fill: #6cc644;
-}
-.linkedin-icon > svg:hover {
-  fill: #0077b5;
+.icon-item > svg:hover{
+  fill: #ffffff;
 }
 
+.footer{
+  margin-bottom: 0;
+  background-color: #151515;
+}
+.handmade{
+  font-size: 1.2em;
+}
 @media screen and (max-width: 1024px) {
   /* body {
     padding-bottom: 70vh;
