@@ -10,9 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Lato:300,400,700,900" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -29,11 +28,11 @@
 
         <div class="container-fluid">
 
-          <nav class="col-md-12 nav-down nav-bar">
-            <div class="nav-content col-md-12 ">
-              <div class="col-md-6">
-                <div class="logo">
-                  <svg viewBox="0 0 133 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <div class="col-xs-12 nav-down nav-bar">
+            <div class="col-xs-12 nav-content ">
+              <div class="col-xs-6">
+                <a href="#aboutme"><div class="logo">
+                 <a href="#aboutme"> <svg viewBox="0 0 133 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   
                     <desc>Created with Sketch.</desc>
                     <defs></defs>
@@ -44,18 +43,20 @@
                             </text>
                         </g>
                     </g>
-                  </svg>
+                  </svg></a>
                 </div>
               </div>
-              <div class="col-md-6">            
+              <div class="col-xs-6">            
                   <ul class="items">
                       <a href="#aboutme">About</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#contactme">Contact</a>
                   </ul>
+          
+
                 </div>
               </div>
-            </nav>
+            </div>
 
           <div class="home">
             <div class="overlay row">           
@@ -117,55 +118,55 @@
             <div class="text-center">
               <div class="title">Portfolio</div>
             </div>
-            <div class="grid">
-              <div class="row">
-                <div class="col-md-4 portfolio-item "  data-toggle="modal" data-target="#logApp"><img src="images/img.jpg" class="image img-responsive" alt>
+            <div class="container">
+              <div class="row ">
+                    <div class="col-md-4 portfolio-item "  data-toggle="modal" data-target="#logApp">
+                      <img src="images/logapp.png" class="image img-responsive" alt>
 
-                  <div class="filter">
-
-                      <div class="mask">
-                      <div class="text">
-                        <span>
-                          <div class="heading">Log Analytics</div>
-                        <div class="desc">I worked on the front-end of this application and used ReactJS, Axios and Google Charts. </div>
-                      </span>
-                      </div>
-                      </div>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#its"><img src="images/img.jpg" class="image img-responsive" alt>
-                    <div class="filter">
-
-                      <div class="mask">
-                        <div class="text">
-                          <span>
-                            <div class="heading">Information Technology Services</div>
-                          <div class="desc">My team and I worked with ITS to redesign their website and make it more user-friendly. </div>
-                        </span>
-                        </div>
-                      </div>
-                      </div>
-
-                    </div>
-                    <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#boxbreathing"><img src="images/img.jpg" class="image img-responsive" alt>
                       <div class="filter">
 
-                      <div class="mask">
-                          <div class="text">
-                            <span>
-                              <div class="heading">Box Breathing Application</div>
-                            <div class="desc">I independently developed this app to practise a stress management technique that would help me meditate. </div>
-                          </span>
+                          <div class="mask">
+                            <div class="text">
+                              <span>
+                                <div class="heading">Log Analytics</div>
+                              <div class="desc">I worked on the front-end of this application and used ReactJS, Axios and Google Charts. </div>
+                            </span>
+                            </div>
                           </div>
-                          </div>
-                        </div>
                       </div>
-              <!-- </div> -->
+                    </div>
+                      <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#its"><img src="images/img.jpg" class="image img-responsive" alt>
+                        <div class="filter">
+
+                          <div class="mask">
+                            <div class="text">
+                              <span>
+                                <div class="heading">Information Technology Services</div>
+                              <div class="desc">My team and I worked with ITS to redesign their website and make it more user-friendly. </div>
+                            </span>
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                        <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#boxbreathing"><img src="images/img.jpg" class="image img-responsive" alt>
+                          <div class="filter">
+
+                          <div class="mask">
+                              <div class="text">
+                                <span>
+                                  <div class="heading">Box Breathing Application</div>
+                                <div class="desc">I independently developed this app to practise a stress management technique that would help me meditate. </div>
+                              </span>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- </div> -->
+              </div>
 
 
 
-              <!-- <div class="row "> -->
+              <div class="row customrow">
                 <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#blog"><img src="images/img.jpg" class="image img-responsive" alt>
                   <div class="filter">
 
@@ -195,24 +196,26 @@
                   </div>
                     <div class="col-md-4 portfolio-item"  data-toggle="modal" data-target="#mancala"><img src="images/img.jpg" class="image img-responsive" alt>
                       <div class="filter">
-
-                      <div class="mask">
-                          <div class="text">
-                            <span>
-                              <div class="heading">Mancala Game</div>
-                            <div class="desc">I worked with a team to develop mancala board game using Java and GUI programming skills. </div>
-                          </span>
-                          </div>
-                      </div>  
+                          <div class="mask">
+                              <div class="text">
+                                <span>
+                                  <div class="heading">Mancala Game</div>
+                                <div class="desc">I worked with a team to develop mancala board game using Java and GUI programming skills. </div>
+                              </span>
+                              </div>
+                          </div>  
                         </div>
                       </div>
+
                 </div>
+              </div>
+
+          <div class="row text-center">
+            <div class="btn btn-default">Download Résumé</div>
           </div>
-          
-          <div class="row text-center"><div class="btn btn-default">Download Résumé</div></div>
-        </div>
         
-       
+        </div>
+
 
         <div class="contacts col-sm-12 " id="contactme">
             <div class="col-sm-5 col-sm-offset-1">
@@ -226,7 +229,7 @@
         </div>
         <div class="col-sm-5 col-sm-offset-1">
           <div class="sayhello">Networks</div>
-            <div class="contact-text">Find and follow me here too! </div>
+            <div class="contact-text">Find and follow me here aswell! </div>
             <div class="icons">
                 <a target="linkedin " href="https://www.linkedin.com/in/joanitha-christle-gomez/" class="icon-item linkedin-icon">
                   
@@ -261,8 +264,8 @@
       </div>
       <div class="footer">
           <div class="text-center">
-            <p class="handmade">Handmade by Joanitha Christle Gomez</p>
-          <p>HTML5 | CSS3 | JavaScript | Bootstrap</p>
+            <div class="handmade">Handmade by Joanitha Christle Gomez</div>
+          <div class="tools">HTML5 | CSS3 | JavaScript | Bootstrap</div>
         </div>
       </div>
         <!-- containerfluid. -->
@@ -372,13 +375,13 @@
             <p class="modal-text">Group Project Manager</p>
 
             <h4>Used:</h4>
-            <p class="modal-text">ReactJS, PHP, Google Charts, Sketch</p>
+            <p class="modal-text">HTML, Content Management System, Adobe Spark, Google Sheets</p>
 
             <h4>Year:</h4>
-            <p class="modal-text">2017</p>
+            <p class="modal-text">2016</p>
 
             <h4>Course: </h4>
-            <p class="modal-text">Software Engineering</p>
+            <p class="modal-text">Technical Communication</p>
           </div>
 
           <div class="col-lg-7  inner-container">
@@ -432,16 +435,16 @@
           <div class="col-lg-3 col-lg-offset-1 ">
 
             <h4>Role:</h4>
-            <p class="modal-text">Group Project Manager/ UI Designer/ Frontend Developer</p>
+            <p class="modal-text">Frontend Developer/ UI Designer</p>
 
             <h4>Used:</h4>
-            <p class="modal-text">ReactJS, PHP, Google Charts, Sketch</p>
+            <p class="modal-text">HTML5, CSS3, JavaScript, jQuery, VelocityUI, Codepen</p>
 
             <h4>Year:</h4>
             <p class="modal-text">2017</p>
 
             <h4>Course: </h4>
-            <p class="modal-text">Software Engineering</p>
+            <p class="modal-text">Self-study</p>
           </div>
 
           <div class="col-lg-7  inner-container">
@@ -494,16 +497,16 @@
           <div class="col-lg-3 col-lg-offset-1 ">
 
             <h4>Role:</h4>
-            <p class="modal-text">Group Project Manager/ UI Designer/ Frontend Developer</p>
+            <p class="modal-text">Frontend Developer/ UI Designer</p>
 
             <h4>Used:</h4>
-            <p class="modal-text">ReactJS, PHP, Google Charts, Sketch</p>
+            <p class="modal-text">ReactJS, JSP, Fetch, Material UI, MySQL, Tomcat, AWS, Sketch</p>
 
             <h4>Year:</h4>
             <p class="modal-text">2017</p>
 
             <h4>Course: </h4>
-            <p class="modal-text">Software Engineering</p>
+            <p class="modal-text">Information Security</p>
           </div>
 
           <div class="col-lg-7  inner-container">
@@ -556,16 +559,16 @@
           <div class="col-lg-3 col-lg-offset-1 ">
 
             <h4>Role:</h4>
-            <p class="modal-text">Group Project Manager/ UI Designer/ Frontend Developer</p>
+            <p class="modal-text">UI Designer/ Frontend Developer</p>
 
             <h4>Used:</h4>
-            <p class="modal-text">ReactJS, PHP, Google Charts, Sketch</p>
+            <p class="modal-text">HTML5/CSS3, JavaScript, jQuery, Velocity UI, Ajax, Firebase</p>
 
             <h4>Year:</h4>
             <p class="modal-text">2017</p>
 
             <h4>Course: </h4>
-            <p class="modal-text">Software Engineering</p>
+            <p class="modal-text">Self-study</p>
           </div>
 
           <div class="col-lg-7  inner-container">
@@ -618,16 +621,16 @@
           <div class="col-lg-3 col-lg-offset-1 ">
 
             <h4>Role:</h4>
-            <p class="modal-text">Group Project Manager/ Developer</p>
+            <p class="modal-text">Developer/ Group Project Manager</p>
 
             <h4>Used:</h4>
-            <p class="modal-text">ReactJS, PHP, Google Charts, Sketch</p>
+            <p class="modal-text">Java, Model-View-Controller pattern, Eclipse</p>
 
             <h4>Year:</h4>
             <p class="modal-text">2017</p>
 
             <h4>Course: </h4>
-            <p class="modal-text">Software Engineering</p>
+            <p class="modal-text">Object-oriented Design</p>
           </div>
 
           <div class="col-lg-7  inner-container">
