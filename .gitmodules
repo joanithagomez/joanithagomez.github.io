@@ -4,3 +4,7 @@
 [submodule "projects/Vault-App"]
 	path = projects/Vault-App
 	url = https://github.com/joanithagomez/Vault-App.git
+[submodule "projects/vault"]
+	path = projects/vault
+	url = https://github.com/joanithagomez/Vault-App.git
+	branch = gh-pages
