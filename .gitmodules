@@ -1,9 +1,6 @@
 [submodule "projects/box-breathing"]
 	path = projects/box-breathing
 	url = https://github.com/joanithagomez/box-breathing
-[submodule "projects/Vault-App"]
-	path = projects/Vault-App
-	url = https://github.com/joanithagomez/Vault-App.git
 [submodule "projects/vault"]
 	path = projects/vault
 	url = https://github.com/joanithagomez/Vault-App.git
