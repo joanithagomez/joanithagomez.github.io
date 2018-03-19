@@ -5,3 +5,6 @@
 	path = projects/vault
 	url = https://github.com/joanithagomez/Vault-App.git
 	branch = gh-pages
+[submodule "movie-finder"]
+	path = movie-finder
+	url = https://github.com/joanithagomez/movie-finder.git
