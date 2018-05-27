@@ -8,4 +8,15 @@ $(document).ready(function() {
     }
   });
 
+  $('#menu').on('click', () => {
+    if ($('#menu').attr('class') === 'menubtn') {
+      $(".menubtn").addClass("responsive");
+      console.log(true);
+    }
+    else {
+      console.log($('#menu').attr('class'));
+      $(".menubtn").removeClass("responsive");
+    }
+  });
+
 });
