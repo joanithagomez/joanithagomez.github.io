@@ -60,7 +60,9 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  margin-top:4px;
+  margin-bottom: 2px;
 }
 .name::selection {
   background-color: #11cbdf;
@@ -74,6 +76,7 @@ body {
 .muted-text {
   color: #00c8dd;
 }
+
 .hello {
   font-size: 2em;
   font-weight: 800;
@@ -89,9 +92,10 @@ body {
 
 .introtext {
   font-family: "Lato", sans-serif;
-  font-size: 2em;
-  font-weight: 200;
-  letter-spacing: 1px;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-top: 0px;
+  /* letter-spacing: 1px; */
   /* color: #11cbdf; */
 }
 
@@ -339,7 +343,6 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #1a0146;
-  border: 3px solid #00c8dd;
   background-color: #00c8dd;
   transition: all 0.3s ease-in-out;
   border-radius: 1px;
@@ -350,8 +353,7 @@ body {
   cursor: pointer;
   user-select: none;
   color: #1a0146;
-  background-color: transparent;
-  border: 3px solid #00c8dd;
+  background-color: #05aabd;
 }
 
 .btn-default:active {
@@ -482,7 +484,7 @@ body {
 .contact-text {
   color: #8e8e8e;
   font-size: 1.2em;
-  font-weight: 200;
+  font-weight: 400;
   padding-bottom: 4%;
   padding-top: 1%;
   letter-spacing: 0.3px;
@@ -494,7 +496,7 @@ body {
 }
 .emailid {
   color: #7a9cf4;
-  font-weight: 200;
+  font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -526,7 +528,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .icon-item > svg:hover {
-  fill: #ffffff;
+  fill: #00c8dd;
 }
 
 .footer {
@@ -573,12 +575,12 @@ body {
     }
     .name,
     .hello {
-      font-size: 22px;
+      font-size: 2em;
       line-height: 26px;
     }
 
     .introtext {
-      font-size: 14px;
+      font-size: 1.4em;
     }
     .intro {
       padding-left: 10% 8% 0% 8%;
@@ -591,27 +593,3 @@ body {
     }
 
 }
-
-/* @media screen and (max-width: 725px) {
-
-  body {
-    font-size: 16px;
-  }
-
-  .name,
-  .hello {
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  .footer {
-    font-size: 0.8em;
-  }
-
-  .introtext {
-    font-size: 14px;
-  }
-  .intro {
-    padding-top: 10% 8% 0% 8%;
-  }
-} */
