@@ -1,24 +1,24 @@
 $(document).ready(function() {
-  //
-  // $(window).on("scroll", function() {
-  //   if ($(window).scrollTop() > 100) {
-  //     $(".nav-bar").addClass("shrink");
-  //   } else {
-  //     $(".nav-bar").removeClass("shrink");
-  //   }
-  // });
-  //
-  // $('#menu').on('click', () => {
-  //   if ($('#menu').attr('class') === 'menubtn') {
-  //     $(".menubtn").addClass("responsive");
-  //     console.log(true);
-  //   }
-  //   else {
-  //     console.log($('#menu').attr('class'));
-  //     $(".menubtn").removeClass("responsive");
-  //   }
+  // $('#too-bright').on('click', () => {
+  //  console.log('too bright')
   // });
 
-
-
+  // const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  // darkModeMediaQuery.addEventListener('change', (e) => {
+  //   const darkModeOn = e.matches;
+  //   console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+  // });
+  
+  setNumberOfYears();
 });
+
+function setNumberOfYears() {
+  const startYear = 2019;
+  const currentYear = new Date().getFullYear();
+  $('#numberOfYears').text(currentYear - startYear);
+}
+
+// function switchMode() {
+//   $(document.documentElement).toggleClass('dark');
+//   console.log("switch")
+// }
