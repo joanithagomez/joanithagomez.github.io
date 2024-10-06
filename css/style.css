@@ -36,9 +36,9 @@ body {
   padding: 10px;
   z-index: 100;
   transition: 200ms linear;
-  &:focus {
-    top: 0;
-  }
+}
+#skip:focus {
+  top: 0;
 }
 a {
   color: var(--link-color);
@@ -89,14 +89,14 @@ nav ul li a {
   color: var(--color);
   font-weight: 400;
   margin: 0 10px;
-  &:before {
-    opacity: 0;
-    content: '<';
-  }
-  &:after {
-    opacity: 0;
-    content: '/>';
-  }
+}
+nav ul li a:before {
+  opacity: 0;
+  content: '<';
+}
+nav ul li a:after {
+  opacity: 0;
+  content: '/>';
 }
 nav ul li a,
 nav ul li a:after,
@@ -106,14 +106,14 @@ nav ul li a:before {
 nav ul li a:hover {
   color: var(--color);
   transform: scale(1.05);
-  &:before {
-    opacity: 1;
-    content: '<';
-  }
-  &:after {
-    opacity: 1;
-    content: '/>';
-  }
+}
+nav ul li a:hover:before {
+  opacity: 1;
+  content: '<';
+}
+nav ul li a:hover:after {
+  opacity: 1;
+  content: '/>';
 }
 
 nav.shift ul li a {
@@ -177,12 +177,12 @@ h1 {
   height: 400px;
   display: flex;
   transition: all 0.3s ease-in-out;
-  img {
-    margin: auto;
-  }
-  &:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
+}
+.memoji img {
+  margin: auto;
+}
+.memoji:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .icons {
@@ -195,15 +195,14 @@ h1 {
   margin: 16px 0;
   width: 24px;
   cursor: pointer;
-  img {
-    transition: transform 0.3s ease-in-out;
-  }
-  &:hover {
-    img {
-      transform: scale(1.4);
-    }
-  }
 }
+.icon-item img {
+  transition: transform 0.3s ease-in-out;
+}
+.icon-item:hover img {
+  transform: scale(1.4);
+}
+
 .icon-item > svg {
   fill: #7f7f7f;
   transition: all 0.3s ease-in-out;
@@ -225,14 +224,14 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  .skill-item {
-    padding: 8px 16px;
-    border: 1px solid var(--accent-color);
-    color: var(--link-color);
-    font-size: 1em;
-    font-weight: 200;
-    border-radius: 4px;
-  }
+}
+.skill-item {
+  padding: 8px 16px;
+  border: 1px solid var(--accent-color);
+  color: var(--link-color);
+  font-size: 1em;
+  font-weight: 200;
+  border-radius: 4px;
 }
 
 .portfolio-container {
@@ -242,68 +241,68 @@ h1 {
   gap: 48px;
   width: 80%;
   margin: 0 auto;
-  .card {
-    margin-bottom: 80px;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
-    .card-body {
-      padding: 0;
-    }
-    .card-subtitle {
-      margin-bottom: 24px;
-      font-size: 1.2em;
-      color: var(--secondary-yellow-color);
-      font-weight: 200;
-    }
-    .card-img {
-      align-self: center;
-      position: relative;
-      video {
-        width: inherit;
-      }
-      img {
-        display: block;
-        margin: auto;
-      }
-    }
-    .skill {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 24px 0;
-      .skill-item {
-        padding: 6px 12px;
-        border: 1px solid var(--accent-color);
-        color: var(--link-color);
-        font-size: 1em;
-        font-weight: 200;
-        border-radius: 50px;
-      }
-    }
-    .card-link {
-      margin-left: 0;
-      margin-right: 8px;
-      padding: 8px 24px;
-      margin-bottom: 8px;
-      border-radius: 4px;
-      display: inline-block;
-      background-color: var(--accent-color);
-      font-weight: 200;
-      font-size: 1em;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        background-color: var(--secondary-yellow-color);
-        color: var(--accent-color);
-      }
-    }
-    .card-content {
-      padding: 60px;
-    }
-  }
+}
+.card {
+  margin-bottom: 80px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
+}
+.card-body {
+  padding: 0;
+}
+.card-subtitle {
+  margin-bottom: 24px;
+  font-size: 1.2em;
+  color: var(--secondary-yellow-color);
+  font-weight: 200;
+}
+.card-img {
+  align-self: center;
+  position: relative;
+}
+.card-img video {
+  width: inherit;
+}
+.card-img img {
+  display: block;
+  margin: auto;
+}
+.skill {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.skill .skill-item {
+  padding: 6px 12px;
+  border: 1px solid var(--accent-color);
+  color: var(--link-color);
+  font-size: 1em;
+  font-weight: 200;
+  border-radius: 50px;
+}
+.card-link {
+  margin-left: 0;
+  margin-right: 8px;
+  padding: 8px 24px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: var(--accent-color);
+  font-weight: 200;
+  font-size: 1em;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.card-link:hover {
+  background-color: var(--secondary-yellow-color);
+  color: var(--accent-color);
+}
+.card-content {
+  padding: 60px;
 }
 
 .btn-default,
@@ -339,27 +338,27 @@ h1 {
 }
 .contact {
   text-align: center;
-  .title {
-    color: #8e8e8e;
-    padding-top: 32px;
-    font-size: 3em;
-    font-weight: 300;
-    &::selection {
-      background-color: var(--accent-color);
-      color: #151515;
-    }
-  }
-  .contact-text {
-    font-weight: 400;
-    font-size: 1em;
-    padding: 16px 16px 40px;
-    letter-spacing: 0.3px;
-  }
-  a {
-    font-size: 1.2em;
-    color: var(--secondary-yellow-color);
-    text-decoration: none;
-  }
+}
+.contact .title {
+  color: #8e8e8e;
+  padding-top: 32px;
+  font-size: 3em;
+  font-weight: 300;
+}
+.contact::selection {
+  background-color: var(--accent-color);
+  color: #151515;
+}
+.contact .contact-text {
+  font-weight: 400;
+  font-size: 1em;
+  padding: 16px 16px 40px;
+  letter-spacing: 0.3px;
+}
+.contact a {
+  font-size: 1.2em;
+  color: var(--secondary-yellow-color);
+  text-decoration: none;
 }
 
 .footer {
@@ -368,9 +367,9 @@ h1 {
   font: 1em;
   color: #8e8e8e;
   background-color: #151515;
-  a {
-    color: var(--accent-color);
-  }
+}
+.footer a {
+  color: var(--accent-color);
 }
 
 .certification-item {
@@ -378,11 +377,11 @@ h1 {
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
-  img {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-  }
+}
+.certification-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
