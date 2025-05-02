@@ -1,21 +1,29 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 :root {
+  --circle-radius: 200px;
   --accent-color: #F1C40F;
   --secondary-yellow-color: #91640F;
   --link-color: #0E0E0E;
-    --color: #171b1f;
-    --muted-color: #505e6b;
-    --background-color: rgb(250, 250, 250);
-  }
+  --color: #171b1f;
+  --muted-color: #505e6b;
+  --background-color: rgb(250, 250, 250);
+  --icon-fill: var(--color);
+  --icon-fill-hover: var(--color);
+}
 body {
   color: var(--color);
   background-color: var(--background-color);
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+a[role="button"] {
+  box-shadow: 0 2px 8px rgba(147, 146, 139, 0.4);
+}
 html,
 body {
   width: 100%;
@@ -44,11 +52,18 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+.header-text h1 {
+  color: var(--secondary-yellow-color);
+}
+.header-text {
+  /* padding-left: 40px; */
+  margin-bottom: 80px;
+}
 .header-text img {
   width: 22px;
   height: 22px;
 }
-/* NAVIGATION */
+/*********** NAVIGATION ************/
 .navbar {
   position: fixed;
   top: 0;
@@ -165,29 +180,63 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: calc(90vh - 80px);
+  min-height: 80vh;
 }
 .hero-container > .row {
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
 }
 
-.memoji {
+.skills-circle {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
   display: flex;
-  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  animation: rotateCircle 45s linear infinite;
 }
-.memoji img {
+.circle-item {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+}
+.circle-item:hover {
+  transform: scale(1.1);
+}
+.circle-item img {
+  position: absolute;
+  transition: left 0.3s ease-out, top 0.3s ease-out;
+  animation: counterRotate 45s linear infinite;
+  max-width: 100%;
+  height: auto;
+}
+
+.memoji-container {
+  width: calc(var(--circle-radius) * 2);
+  height: calc(var(--circle-radius) * 2);
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  border-radius: 50%;
 }
-.memoji:hover {
-  transform: scale(1.1) rotate(5deg);
+.memoji-container img.head {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .icons {
   display: flex;
-  justify-content: flex-start;
   gap: 10px;
 }
 
@@ -197,6 +246,7 @@ h1 {
   cursor: pointer;
 }
 .icon-item img {
+  max-width: 100%;
   transition: transform 0.3s ease-in-out;
 }
 .icon-item:hover img {
@@ -208,9 +258,16 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio,
-.about {
+.portfolio {
   padding: 16px 24px;
+}
+.about {
+  padding: 100px 40px;
+}
+.about-content {
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 100%;
 }
 .title {
   padding-bottom: 40px;
@@ -228,10 +285,10 @@ h1 {
 .skill-item {
   padding: 8px 16px;
   border: 1px solid var(--accent-color);
-  color: var(--link-color);
+  color: var(--color);
   font-size: 1em;
   font-weight: 200;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .portfolio-container {
@@ -248,8 +305,10 @@ h1 {
   display: flex;
   align-items: center;
   border-radius: 4px;
+  background-color: var(--background-color);
   box-shadow: 0 50px 100px rgba(50, 50, 93, .05), 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .1);
 }
+
 .card-body {
   padding: 0;
 }
@@ -279,7 +338,7 @@ h1 {
 .skill .skill-item {
   padding: 6px 12px;
   border: 1px solid var(--accent-color);
-  color: var(--link-color);
+  color: var(--color);
   font-size: 1em;
   font-weight: 200;
   border-radius: 50px;
@@ -296,10 +355,11 @@ h1 {
   font-size: 1em;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  color: var(--link-color);
 }
 .card-link:hover {
-  background-color: var(--secondary-yellow-color);
   color: var(--accent-color);
+  background-color: var(--secondary-yellow-color);
 }
 .card-content {
   padding: 60px;
@@ -307,6 +367,7 @@ h1 {
 
 .btn-default,
 .btn-default:focus {
+  box-shadow: 0 2px 8px rgba(147, 146, 139, 0.4);
   padding: 8px 16px;
   font-size: 1.2em;
   font-weight: 400;
@@ -326,6 +387,9 @@ h1 {
   background-color: var(--secondary-yellow-color);
 }
 
+.btn-default:focus {
+  outline: auto;
+}
 .btn-default:active {
   position: relative;
   top: 10px;
@@ -355,7 +419,7 @@ h1 {
   padding: 16px 16px 40px;
   letter-spacing: 0.3px;
 }
-.contact a {
+.contact .emailid {
   font-size: 1.2em;
   color: var(--secondary-yellow-color);
   text-decoration: none;
@@ -375,8 +439,6 @@ h1 {
 .certification-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
 }
 .certification-item img {
   width: 30px;
@@ -390,6 +452,9 @@ h1 {
   }
 }
 @media screen and (max-width: 768px) {
+  /* .about {
+    padding: 100px 40px;
+  } */
   .navbar.slide-down {
     background-color: var(--background-color);
   }
@@ -401,7 +466,27 @@ h1 {
   .portfolio-container {
     width: 100%;
   }
-  .memoji {
+  .memoji-container {
     width: 300px;
+  }
+}
+
+/******************************* KEYFRAMES ***********************************/
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
