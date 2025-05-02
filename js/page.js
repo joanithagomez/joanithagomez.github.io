@@ -1,12 +1,6 @@
 const storageKey = 'theme-preference'
 
 $(document).ready(function() {
-  const $circles = $('.circle-item img');
-  const circleEl = $('.skills-circle')[0];
-  const containerSize = Math.min(circleEl.offsetWidth || 800, circleEl.offsetHeight || 800);
-  const radius = (containerSize / 2) * 0.95;
-
-
   $('#theme-toggle').on('click', function() {
     switchTheme();
   });
@@ -14,14 +8,14 @@ $(document).ready(function() {
   // sync with system changes
   window
   .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', ({matches:isDark}) => {
+  .addEventListener('change', ({ matches: isDark}) => {
     theme.value = isDark ? 'dark' : 'light'
     setPreference();
   })
 
   reflectPreference();
   stickNav();
-  circularAnimation($circles, radius);
+  circularAnimation();
   // setNumberOfYears();
 });
 
@@ -29,7 +23,13 @@ $(document).ready(function() {
 /**
  * Positions elements in a circular layout around the center of their container.
 */
-function circularAnimation($circles, radius) {
+function circularAnimation() {
+  const $circles = $('.circle-item img');
+  const circleEl = $('.skills-circle')[0];
+  const containerSize = Math.min(circleEl.offsetWidth || 800, circleEl.offsetHeight || 800);
+  const radius = (containerSize / 2) * 0.95;
+  console.log({containerSize})
+
   const numItems = $circles.length;
   const initialAngleStep = (2 * Math.PI) / numItems;
   
@@ -41,6 +41,20 @@ function circularAnimation($circles, radius) {
     $(this).css('top', `calc(50% + ${y}px)`);
   });
 }
+
+function debounce(fn, t) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), t);
+  }
+}
+
+const handleResize  = debounce(() => {
+    circularAnimation();
+  }, 250); 
+
+$(window).resize(handleResize);
 
 function stickNav() {
   let lastScroll = 0;
