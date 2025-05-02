@@ -98,6 +98,9 @@
     --icon-fill: var(--color);
     --icon-fill-hover: var(--color);
 }
+[data-theme=dark] [role=button] {
+  color: var(--background-color)
+}
 [data-theme=dark] .header-text h1 {
   color: var(--accent-color);
 }

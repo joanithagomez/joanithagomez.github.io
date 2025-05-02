@@ -116,4 +116,11 @@ function reflectPreference () {
     .setAttribute('data-theme', theme.value)
 
   $('#theme-toggle')?.attr('aria-label', theme.value);
+
+  const $navbar = $('.navbar');
+  if (theme.value === 'dark') {
+    $navbar.removeClass('navbar-light bg-light').addClass('navbar-dark bg-dark');
+  } else {
+    $navbar.removeClass('navbar-dark bg-dark').addClass('navbar-light bg-light');
+  }
 }

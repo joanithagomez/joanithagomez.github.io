@@ -170,6 +170,8 @@ h1 {
 }
 .hero-container {
   margin-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,7 +342,7 @@ h1 {
   font-weight: 200;
   border-radius: 50px;
 }
-.card-link {
+.card-content .card-link {
   margin-left: 0;
   margin-right: 8px;
   padding: 8px 24px;
@@ -354,7 +356,7 @@ h1 {
   transition: all 0.3s ease-in-out;
   color: var(--link-color);
 }
-.card-link:hover {
+.card-content .card-link:hover {
   color: var(--accent-color);
   background-color: var(--secondary-yellow-color);
 }
@@ -449,11 +451,14 @@ h1 {
   }
 }
 @media screen and (max-width: 768px) {
+  .portfolio-container {
+    width: 100%;
+  }
   .navbar.slide-down {
     background-color: var(--background-color);
   }
   .memoji-container img {
-    width: 70%;
+    width: 60%;
   }
 }
 @media screen and (max-width: 425px) {
