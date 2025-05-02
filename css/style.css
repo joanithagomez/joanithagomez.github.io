@@ -52,9 +52,7 @@ a {
 .header-text h1 {
   color: var(--secondary-yellow-color);
 }
-.header-text {
-  margin-bottom: 80px;
-}
+
 .header-text img {
   width: 22px;
   height: 22px;
@@ -178,12 +176,14 @@ h1 {
   width: 100%;
   min-height: 80vh;
 }
-.hero-container > .row {
-  display: flex;
-  justify-content: space-evenly;
+.hero-wrapper .row {
+  align-items: center; 
   width: 100%;
 }
-
+.hero-wrapper {
+  width: 100%;
+  margin: auto;
+}
 .skills-circle {
   position: absolute;
   z-index: 1;
@@ -210,17 +210,18 @@ h1 {
   transition: left 0.3s ease-out, top 0.3s ease-out;
   animation: counterRotate 45s linear infinite;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
 }
-
+.memoji-wrapper {
+  max-width: 90%;
+  margin: auto;
+}
 .memoji-container {
-  width: calc(var(--circle-radius) * 2);
-  height: calc(var(--circle-radius) * 2);
+  width: 88%;
+  /* width: calc(var(--circle-radius) * 2);
+  height: calc(var(--circle-radius) * 2); */
   position: relative;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  aspect-ratio: 1 / 1;
   margin: auto;
   border-radius: 50%;
 }
@@ -448,11 +449,11 @@ h1 {
   }
 }
 @media screen and (max-width: 768px) {
-  /* .about {
-    padding: 100px 40px;
-  } */
   .navbar.slide-down {
     background-color: var(--background-color);
+  }
+  .memoji-container img {
+    width: 70%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -462,8 +463,8 @@ h1 {
   .portfolio-container {
     width: 100%;
   }
-  .memoji-container {
-    width: 300px;
+  .header-text {
+    margin-bottom: 80px;
   }
 }
 
