@@ -23,18 +23,17 @@ $(document).ready(function() {
 /**
  * Positions elements in a circular layout around the center of their container.
 */
+
 function circularAnimation() {
   const $circles = $('.circle-item img');
-  const circleEl = $('.skills-circle')[0];
-  const containerSize = Math.min(circleEl.offsetWidth || 800, circleEl.offsetHeight || 800);
+  const containerRect = $('.skills-circle')[0].getBoundingClientRect();
+  const containerSize = Math.min(containerRect.width || 400, containerRect.height || 400);
   const radius = (containerSize / 2) * 0.95;
-  console.log({containerSize})
-
   const numItems = $circles.length;
-  const initialAngleStep = (2 * Math.PI) / numItems;
-  
+  const angleStep = (2 * Math.PI) / numItems;
+
   $circles.each(function(i) {
-    const angle = i * initialAngleStep - (Math.PI / 2);
+    const angle = i * angleStep - (Math.PI / 2);
     const x = radius * Math.cos(angle);
     const y = radius * Math.sin(angle);
     $(this).css('left', `calc(50% + ${x}px)`);
