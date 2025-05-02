@@ -23,15 +23,15 @@ $(document).ready(function() {
 /**
  * Positions elements in a circular layout around the center of their container.
 */
-
 function circularAnimation() {
   const $circles = $('.circle-item img');
-  const containerRect = $('.skills-circle')[0].getBoundingClientRect();
-  const containerSize = Math.min(containerRect.width || 400, containerRect.height || 400);
+  const circleEl = $('.skills-circle')[0];
+  const containerSize = Math.min(circleEl.offsetWidth || 800, circleEl.offsetHeight || 800);
   const radius = (containerSize / 2) * 0.95;
+
   const numItems = $circles.length;
   const angleStep = (2 * Math.PI) / numItems;
-
+  
   $circles.each(function(i) {
     const angle = i * angleStep - (Math.PI / 2);
     const x = radius * Math.cos(angle);
