@@ -27,7 +27,7 @@ function circularAnimation() {
   const $circles = $('.circle-item img');
   const circleEl = $('.skills-circle')[0];
   const containerSize = Math.min(circleEl.offsetWidth || 800, circleEl.offsetHeight || 800);
-  const radius = (containerSize / 2) * 0.9;
+  const radius = (containerSize / 2) * 0.95;
 
   const numItems = $circles.length;
   const angleStep = (2 * Math.PI) / numItems;

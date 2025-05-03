@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta name="theme-color" media="(prefers-color-scheme: light dark)" /> -->
   <title>Joanitha | Frontend Developer</title>
 
   <link rel="icon" href="assets/memoji.png" />
@@ -16,17 +15,6 @@
   <link rel="stylesheet" href="css/theme.css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script>
-    // If `prefers-color-scheme` is not supported, fall back to light mode.
-    // In this case, light.css will be downloaded with `highest` priority.
-    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-      document.documentElement.style.display = 'none';
-      document.head.insertAdjacentHTML(
-        'beforeend',
-        '<link rel="stylesheet" href="/light.css" onload="document.documentElement.style.display = \'\'">',
-      );
-    }
-  </script> -->
 
   <script type="text/javascript" src="js/page.js"></script>
   <style>
@@ -102,20 +90,20 @@
             <span>Hi! I'm</span>
             <h1>Joanitha Gomez</h1>
             <h4 class="mb-4 pb-2">Developer, debugger and dessert lover 🍨</br></h4>
-            <div class="header-list">
-              <div class="my-3">
+            <ul class="header-list">
+              <li class="my-3 d-flex">
                 <img class="l-icon mr-2" src="assets/award.svg" alt=""/>
-                <span id="numberOfYears">5+</span> years of frontend development experience
-              </div>
-              <div class="my-3">
+                <div><span id="numberOfYears">5+</span> years of frontend development experience</div>
+              </li>
+              <li class="my-3 d-flex">
                 <img class="l-icon mr-1" src="assets/graduation-cap.svg" alt=""/>
-                Graduate from San José State University, California
-              </div>
-              <div class="my-3">
+                <div>Graduate from San José State University, California</div>
+              </li>
+              <li class="my-3 d-flex">
                 <img class="l-icon mr-1" src="assets/pin.svg" alt=""/>
-                India / SF Bay Area
-              </div>
-            </div>
+                <div>India / SF Bay Area</div>
+              </li>
+            </ul>
 
             <div class="icons">
               <a class="icon-item emailid" href="mailto:joanitha.c.gomez@gmail.com" aria-label="Send email">
@@ -130,7 +118,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-sm-12 ">
+          <div class="col-md-6 col-sm-12">
             <div class="memoji-wrapper">
               <div class="memoji-container">
                   <div>

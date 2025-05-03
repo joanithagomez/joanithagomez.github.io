@@ -157,6 +157,13 @@ nav.shift ul li a:hover:after {
 .yellow-bg {
   background-color: var(--accent-color);
 }
+.header-list {
+  padding-left: 0;
+}
+.header-list li {
+  gap: 4px;
+  align-items: center;
+}
 .header-list img {
   opacity: 0.4;
   margin-right: 0.3rem;
@@ -180,11 +187,14 @@ h1 {
 }
 .hero-wrapper .row {
   align-items: center; 
+  justify-content: space-between;
   width: 100%;
 }
 .hero-wrapper {
   width: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 .skills-circle {
   position: absolute;
@@ -450,7 +460,18 @@ h1 {
     width: 100%;
   }
 }
+@media screen and (max-width: 992px) {
+  .hero-container {
+    padding: 0;
+  }
+  .memoji-container img {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 768px) {
+  .hero-container {
+    padding: 32px;
+  }
   .portfolio-container {
     width: 100%;
   }
