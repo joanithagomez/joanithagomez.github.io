@@ -16,7 +16,7 @@ $(document).ready(function() {
   reflectPreference();
   stickNav();
   circularAnimation();
-  // setNumberOfYears();
+  setNumberOfYears();
 });
 
 
